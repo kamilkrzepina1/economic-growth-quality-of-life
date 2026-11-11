@@ -1,5 +1,11 @@
 # Economic Growth and Quality of Life in European Union Countries (2010-2024)
 
+[![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)](https://jupyter.org/)
+[![Eurostat](https://img.shields.io/badge/Data-Eurostat-003399)](https://ec.europa.eu/eurostat)
+![Period](https://img.shields.io/badge/Period-2010--2024-6C757D)
+
+
 ## Project Overview
 
 This project examines the statistical relationship between economic growth and quality of life across 27 EU Member States between 2010 and 2024.
