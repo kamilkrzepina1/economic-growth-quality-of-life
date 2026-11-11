@@ -1,0 +1,6 @@
+Rodzaj analizy,Wymiar,N,Pearson r,Spearman rho,Współczynnik regresji,p-value,R-squared
+Przekrojowa,Realny wzrost mediany dochodu,26,0.866,0.845,1.5839,<0.001,0.749
+Przekrojowa,Zmiana wskaźnika zatrudnienia,27,0.81,0.818,3.051,<0.001,0.656
+Przekrojowa,Zmiana wskaźnika AROPE,27,-0.638,-0.753,-1.9158,<0.001,0.408
+Przekrojowa,Zmiana oczekiwanej długości życia,27,0.489,0.445,0.2806,0.0097,0.239
+Przekrojowa,Średni indeks jakości życia,26,-0.611,-0.644,,0.0009 / 0.0004,

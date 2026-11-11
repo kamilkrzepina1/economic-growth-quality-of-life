@@ -1,0 +1,6 @@
+Hipoteza,Treść,Wynik,Ocena
+H1,Wzrost PKB wiąże się ze wzrostem realnych dochodów.,"Dodatnia, silna korelacja (r = 0.866).",Potwierdzona
+H2,Wzrost PKB wiąże się z poprawą sytuacji na rynku pracy.,"Dodatnia, silna korelacja (r = 0.810).",Potwierdzona
+H3,Wzrost PKB wiąże się ze spadkiem AROPE.,Ujemna korelacja ze zmianą AROPE (r = -0.638).,Potwierdzona
+H4,Wzrost PKB wiąże się ze wzrostem długości życia.,"Dodatnia, umiarkowana korelacja (r = 0.489).",Częściowo potwierdzona
+H5,Wzrost PKB wiąże się z poprawą indeksu jakości życia.,"Ujemna korelacja przekrojowa, dodatnia zależność opóźniona w modelu panelowym.",Wyniki niejednoznaczne

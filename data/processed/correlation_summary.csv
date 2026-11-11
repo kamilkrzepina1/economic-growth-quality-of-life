@@ -1,0 +1,5 @@
+relationship,pearson,spearman,observations,p_value
+GDP growth and real income growth,0.866,0.845,26,<0.001
+GDP growth and employment change,0.81,0.818,27,<0.001
+GDP growth and AROPE change,-0.6384167581032525,-0.7525568703157258,27,<0.001
+GDP growth and life expectancy change,0.48854587643291814,0.44527700673496734,27,<0.05
