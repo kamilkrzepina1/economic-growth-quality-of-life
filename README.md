@@ -1,95 +1,130 @@
+# Economic Growth and Quality of Life in European Union Countries (2010-2024)
 
-# Wzrost gospodarczy a jakość życia w krajach Unii Europejskiej
+## Project Overview
 
-## Temat badania
+This project examines the statistical relationship between economic growth and quality of life across 27 EU Member States between 2010 and 2024.
 
-**Wzrost gospodarczy a jakość życia w krajach Unii Europejskiej –
-analiza statystyczna danych społeczno-ekonomicznych w latach 2010–2024.**
+The analysis uses annual socioeconomic data from Eurostat.
+The study is quantitative, comparative and observational.
+The results describe statistical associations, not causal relationships.
 
-## Cel badania
+## Research Objectives
 
-Celem projektu jest zbadanie zależności statystycznych między
-wzrostem gospodarczym a wybranymi wymiarami jakości życia
-w 27 państwach Unii Europejskiej w latach 2010–2024.
+- Examine GDP growth and household income.
+- Analyse economic growth and employment.
+- Investigate GDP growth and poverty or social exclusion.
+- Assess economic growth and life expectancy.
+- Construct a composite quality-of-life index.
 
-Analiza ma charakter ilościowy, porównawczy i obserwacyjny.
-Jednostką obserwacji jest kraj w danym roku.
+## Data and Indicators
 
-## Zakres badania
+| Indicator | Period |
+|---|---|
+| Real GDP per capita growth | 2010-2024 |
+| Median equivalised disposable income | 2010-2024 |
+| Employment rate (age 20-64) | 2010-2024 |
+| AROPE | 2015-2024 |
+| Life expectancy at birth | 2010-2024 |
 
-- 27 państw Unii Europejskiej.
-- Okres analizy: 2010–2024.
-- Dane roczne.
-- Źródło danych: Eurostat.
-- Analiza przekrojowa i panelowa.
+**Data source:** [Eurostat](https://ec.europa.eu/eurostat)
 
-## Wykorzystane wskaźniki
+## Methodology
 
-1. Roczna stopa wzrostu realnego PKB per capita.
-2. Mediana ekwiwalentnego dochodu do dyspozycji.
-3. Wskaźnik zatrudnienia osób w wieku 20–64 lata.
-4. Wskaźnik zagrożenia ubóstwem lub wykluczeniem społecznym (AROPE).
-5. Oczekiwana długość życia w chwili urodzenia.
+- Data collection and cleaning using Python.
+- Descriptive statistics.
+- Pearson and Spearman correlations.
+- Ordinary Least Squares (OLS) regression.
+- Panel models with country and year fixed effects.
+- Robust standard errors and sensitivity analysis.
+- Composite quality-of-life index using standardized indicators.
 
-Dodatkowo skonstruowano syntetyczny indeks jakości życia
-oparty na dochodach, zatrudnieniu, wskaźniku AROPE
-i oczekiwanej długości życia.
+The composite index combines income, employment, reversed AROPE and life expectancy with equal weights.
+It is standardized separately for each year and measures relative positions between countries.
 
-## Metody badawcze
+## Key Findings
 
-- Statystyki opisowe.
-- Korelacja Pearsona.
-- Korelacja rang Spearmana.
-- Prosta regresja liniowa OLS.
-- Modele panelowe z efektami stałymi krajów i lat.
-- Błędy standardowe klastrowane według krajów.
-- Analiza wrażliwości leave-one-country-out.
-- Standaryzacja wskaźników i konstrukcja indeksu syntetycznego.
+| Relationship | Pearson correlation |
+|---|---:|
+| GDP growth and real income growth | 0.866 |
+| GDP growth and employment improvement | 0.810 |
+| GDP growth and change in AROPE | -0.638 |
+| GDP growth and life expectancy improvement | 0.489 |
+| GDP growth and composite quality-of-life index | -0.611 |
 
-## Najważniejsze wyniki
+Stronger economic growth is associated with faster real income growth and improvements in employment.
+Higher GDP growth is also associated with larger reductions in the risk of poverty or social exclusion.
+The relationship with life expectancy is weaker.
 
-W analizie przekrojowej stwierdzono dodatnie zależności
-między wzrostem PKB a wzrostem realnych dochodów
-(r = 0,866) oraz zmianą wskaźnika zatrudnienia (r = 0,810).
+The negative cross-country association with the composite index requires careful interpretation.
+The index measures relative country positions, not absolute improvements over time.
+Panel analysis identifies a positive association between lagged GDP growth and changes in the index.
 
-Zaobserwowano również ujemną zależność między wzrostem PKB
-a zmianą wskaźnika AROPE (r = -0,638).
+## Selected Visualisations
 
-Zależność między wzrostem PKB a zmianą oczekiwanej długości
-życia była umiarkowanie dodatnia (r = 0,489).
+### GDP Growth and Employment
 
-W przypadku syntetycznego indeksu jakości życia uzyskano
-ujemną korelację przekrojową (r = -0,611), natomiast
-w modelu panelowym stwierdzono dodatnią zależność
-z opóźnionym wzrostem PKB.
+![GDP growth and employment](figures/gdp_employment_relationship.png)
 
-Wyniki wskazują, że zależności między wzrostem gospodarczym
-a jakością życia różnią się w zależności od analizowanego
-wymiaru.
+### GDP Growth and AROPE
 
-## Ograniczenia
+![GDP growth and AROPE](figures/gdp_arope_relationship.png)
 
-Badanie ma charakter obserwacyjny, dlatego nie pozwala
-na wnioskowanie przyczynowo-skutkowe.
+### GDP Growth and Life Expectancy
 
-Indeks jakości życia obejmuje lata 2015–2024 i 26 państw.
-Jest standaryzowany osobno dla każdego roku, a zatem
-odzwierciedla względną pozycję państw w badanej grupie.
+![GDP growth and life expectancy](figures/gdp_life_expectancy_relationship.png)
 
-## Struktura projektu
+### Quality-of-Life Ranking
 
-- `data/raw/` – surowe dane źródłowe.
-- `data/processed/` – przetworzone zbiory danych i zestawienia wyników.
-- `figures/` – wykresy i wizualizacje.
-- `notebooks/` – notebooki Jupyter.
-- `reports/` – raporty i dokumentacja badania.
+![Quality of life ranking](figures/quality_of_life_ranking.png)
 
-## Uruchomienie projektu
+### GDP Growth and Quality of Life
 
-Projekt przygotowano w Pythonie i Jupyter Notebook.
+![GDP growth and quality of life](figures/gdp_quality_of_life_correlation.png)
 
-Wymagane biblioteki znajdują się w pliku `requirements.txt`.
+## Repository Structure
 
-## Autorstwo i źródło danych
+- `data/raw/` - raw data
+- `data/processed/` - processed datasets
+- `figures/` - charts and visualisations
+- `notebooks/` - Jupyter notebooks
+- `reports/` - research reports
+- `requirements.txt` - Python dependencies
 
-Dane statystyczne pochodzą z bazy Eurostat.
+## Technologies
+
+Python 3, Jupyter Notebook, pandas, NumPy, Matplotlib, Seaborn, SciPy and statsmodels.
+
+## How to Run the Project
+
+Clone the repository:
+
+```bash
+git clone https://github.com/kamilkrzepina1/economic-growth-quality-of-life.git
+cd economic-growth-quality-of-life
+pip install -r requirements.txt
+jupyter notebook
+```
+
+Open `notebooks/01_data_collection.ipynb` and run the notebook cells.
+
+## Limitations
+
+- The study is observational and does not establish causality.
+- The composite index covers 26 countries because of income data comparability limitations.
+- AROPE data cover a shorter period (2015-2024).
+- Statistical methodology changes may affect comparability.
+- Ireland's GDP statistics can be strongly influenced by multinational enterprise activity.
+- Panel models cover a relatively short period and a limited number of country clusters.
+
+## Conclusion
+
+Economic growth is positively associated with several socioeconomic outcomes, particularly real income growth and employment improvements.
+However, quality of life is multidimensional, and GDP growth alone does not explain all differences in social outcomes.
+
+## Author
+
+**Kamil Krzepina**
+
+Project type: Quantitative socioeconomic analysis
+Data source: Eurostat
+Study period: 2010-2024
